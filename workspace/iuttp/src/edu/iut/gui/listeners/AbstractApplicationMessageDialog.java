@@ -3,13 +3,16 @@ package edu.iut.gui.listeners;
 import edu.iut.app.IApplicationLogListener;
 
 public abstract class AbstractApplicationMessageDialog implements
-		IApplicationLogListener {
+IApplicationLogListener {
+
 
 	@Override
 	public void newMessage(String level, String message) {
-	 /* TP1 : CODE A FOURNIR */*
+	 this.message=message;
+	 this.level=level;
+	 
 	}
 	
-	/* TP1 ajouter une mÃ©thode abstraite showMessage */
+	/* TP1 ajouter une méthode abstraite showMessage */
 
 }

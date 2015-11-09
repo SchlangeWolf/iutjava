@@ -10,17 +10,17 @@ public class ApplicationLogs extends ArrayList<IApplicationLog> {
 	
 	public ArrayList<IApplicationLog> getErrors() {
 		ArrayList<IApplicationLog> filteredLogs = new ArrayList<IApplicationLog>();
-		// une boucle Ã  faire ici, penser Ã  utiliser instanceof
+		// une boucle à faire ici, penser à utiliser instanceof
 		return filteredLogs;
 	}
 	public ArrayList<IApplicationLog> getWarnings() {
 		ArrayList<IApplicationLog> filteredLogs = new ArrayList<IApplicationLog>();
-		// une boucle Ã  faire ici, penser Ã  utiliser instanceof
+		// une boucle à faire ici, penser à utiliser instanceof
 		return filteredLogs;
 	}
 	public ArrayList<IApplicationLog> getInfos() {
 		ArrayList<IApplicationLog> filteredLogs = new ArrayList<IApplicationLog>();
-		// une boucle Ã  faire ici, penser Ã  utiliser instanceof
+		// une boucle à faire ici, penser à utiliser instanceof
 		return filteredLogs;
 	}
 	

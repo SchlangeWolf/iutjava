@@ -2,7 +2,7 @@ package edu.iut.app;
 
 public class ApplicationWarningLog extends AbstractApplicationLog {
 
-	/** Ajouter un tableau ou profiter de l'hÃ©ritage ? */
+	/** Ajouter un tableau ou profiter de l'héritage ? */
 	public ApplicationWarningLog() {
 		super();
 	}
