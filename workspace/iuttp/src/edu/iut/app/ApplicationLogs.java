@@ -11,16 +11,40 @@ public class ApplicationLogs extends ArrayList<IApplicationLog> {
 	public ArrayList<IApplicationLog> getErrors() {
 		ArrayList<IApplicationLog> filteredLogs = new ArrayList<IApplicationLog>();
 		// une boucle à faire ici, penser à utiliser instanceof
+		
+			for(IApplicationLog l:filteredLogs)
+			{
+				if(l instanceof ApplicationErrorLog)
+				{
+					
+				}
+			}
 		return filteredLogs;
 	}
 	public ArrayList<IApplicationLog> getWarnings() {
 		ArrayList<IApplicationLog> filteredLogs = new ArrayList<IApplicationLog>();
 		// une boucle à faire ici, penser à utiliser instanceof
+		
+		for(IApplicationLog l:filteredLogs)
+		{
+			if(l instanceof ApplicationWarningLog)
+			{
+				
+			}
+		}
 		return filteredLogs;
 	}
 	public ArrayList<IApplicationLog> getInfos() {
 		ArrayList<IApplicationLog> filteredLogs = new ArrayList<IApplicationLog>();
 		// une boucle à faire ici, penser à utiliser instanceof
+		
+		for(IApplicationLog l:filteredLogs)
+		{
+			if(l instanceof ApplicationInfoLog)
+			{
+				
+			}
+		}
 		return filteredLogs;
 	}
 	

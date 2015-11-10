@@ -13,6 +13,7 @@ public abstract class AbstractApplicationLog implements IApplicationLog {
 		this.listeners.add(a);
 	}
 	
+	
 	public abstract ArrayList<IApplicationLogListener> getTabListener();
 	
 	public abstract void setMessage(String message);
@@ -24,7 +25,7 @@ public abstract class AbstractApplicationLog implements IApplicationLog {
 	}
 	
     /** TP1 : Fonction venant de l'interface par héritage */
-
+	
 
 	/** Listener action */
 	

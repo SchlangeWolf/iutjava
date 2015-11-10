@@ -3,7 +3,8 @@ package edu.iut.app;
 import java.util.ArrayList;
 
 public class ApplicationErrorLog extends AbstractApplicationLog {
-
+	
+	
 	/** Ajouter un tableau ou profiter de l'héritage ? */
 	public ApplicationErrorLog() {
 		super();
@@ -15,15 +16,15 @@ public class ApplicationErrorLog extends AbstractApplicationLog {
 		
 	}
 
-	@Override
-	public void setMessage(String message) {
-		// TODO Auto-generated method stub
-		String level=null;
+	
+	public void setMessage(String message){
+		
+		this.message = message;
 		for(IApplicationLogListener l:listeners)
 		{
-			l.newMessage(level,message);
+			l.newMessage("[ERROR]",message);
 		}
-		
+      
 	}
 
 	
@@ -35,7 +36,7 @@ public class ApplicationErrorLog extends AbstractApplicationLog {
 	}
 
 	@Override
-	public IApplicationLogListener getApplicationLogListeners() {
+	public ArrayList<IApplicationLogListener> getApplicationLogListeners() {
 		// TODO Auto-generated method stub
 		return null;
 	}
