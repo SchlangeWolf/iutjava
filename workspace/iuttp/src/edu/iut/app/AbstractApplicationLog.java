@@ -5,29 +5,30 @@ import java.util.ArrayList;
 public abstract class AbstractApplicationLog implements IApplicationLog {
 
 	protected String message;
-	/** TP1 : Tableau au sens des collections **/
 	protected ArrayList<IApplicationLogListener> listeners;
-	
-	public void addListener(IApplicationLogListener a)
-	{
-		this.listeners.add(a);
-	}
-	
-	
-	public abstract ArrayList<IApplicationLogListener> getTabListener();
-	
-	public abstract void setMessage(String message);
-	
 	
 	public AbstractApplicationLog() {
 		message = null;
 		listeners = new ArrayList<IApplicationLogListener>();
 	}
 	
-    /** TP1 : Fonction venant de l'interface par héritage */
-	
+	@Override
+	public abstract void setMessage(String message);
 
-	/** Listener action */
+	@Override
+	public String getMessage() {
+		return message;
+	}
+
+	@Override
+	public void addListener(IApplicationLogListener listener) {
+		listeners.add(listener);
+
+	}
+	@Override
+	public IApplicationLogListener[] getApplicationLogListeners() {
+		return (IApplicationLogListener[])listeners.toArray();
+	}
 	
 	protected void fireMessage(String level, String message) {
 		for (IApplicationLogListener listener_i : listeners) {
