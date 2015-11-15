@@ -1,0 +1,19 @@
+package edu.iut.app;
+
+import java.util.logging.Logger;
+
+public class SingletonSession {
+	private static SingletonSession instance;
+	protected Logger sessionGuiLogger;
+	
+	protected SingletonSession()
+	{}
+	
+	public static synchronized SingletonSession getInstance(){
+		if(instance==null)
+			instance=new SingletonSession();
+		return instance;
+		
+	}
+
+}

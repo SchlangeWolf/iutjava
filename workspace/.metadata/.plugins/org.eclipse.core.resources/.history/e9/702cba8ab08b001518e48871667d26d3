@@ -1,0 +1,12 @@
+package edu.iut.app;
+
+public class SingletonSession {
+	
+	
+	
+	protected SingletonSession()
+	{}
+	
+	
+
+}

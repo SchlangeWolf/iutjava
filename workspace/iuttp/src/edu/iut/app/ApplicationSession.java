@@ -7,18 +7,18 @@ import java.util.logging.Logger;
 
 public class ApplicationSession {
 	
-	// Exercice 1 : Gérer l'internationation
+	// Exercice 1 : G�rer l'internationation
 	protected  ResourceBundle resourceBundle;
 	protected Locale locale;
+	
 	
 	// Exercice 2 : Logger
 	protected Logger sessionGuiLogger;
 	protected Logger sessionExceptionLogger;
-
-
-	static /*Qu'est ce qu'un singleton ?*/ ApplicationSession session = null;
-	private ApplicationSession() {
-		/* Definir US comme locale par défaut */
+	static ApplicationSession session = null;
+	
+	protected ApplicationSession() {
+		/* Definir US comme locale par d�faut */
 		Locale.setDefault(Locale.US);
 		
 		locale = Locale.getDefault();
@@ -26,11 +26,19 @@ public class ApplicationSession {
 		
 		sessionGuiLogger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 		sessionGuiLogger.setLevel(Level.ALL);
-		sessionExceptionLogger = Logger.getLogger(Logger.)
-		sessionExceptionLogger.setLevel(Level.ALL/* Touls les message doivent être affiché */);
+		sessionExceptionLogger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
+		sessionExceptionLogger.setLevel(Level.ALL);
 	}
 	
 	
+	public ApplicationSession(String message) {
+		
+	}
+
+
+	
+
+
 	public static ApplicationSession instance() {
 		if (session == null) {			
 			session = new ApplicationSession();
@@ -48,12 +56,11 @@ public class ApplicationSession {
 	public void setLocale(Locale locale){
 		this.locale = locale;
 		Locale.setDefault(this.locale);
-		resourceBundle=/* récupérer les resources */
+		resourceBundle=ResourceBundle.getBundle("fr",locale);
 	}
 	
 	public String getString(String key) {
 		return resourceBundle.getString(key);
 	}
-	
 	
 }

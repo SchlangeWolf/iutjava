@@ -1,0 +1,11 @@
+package edu.iut.app;
+
+public class SingletonSession {
+	private static Singleton instance;
+	
+	public SingletonSession()
+	{
+		
+	}
+
+}

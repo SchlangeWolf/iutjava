@@ -1,0 +1,17 @@
+package edu.iut.app;
+
+public class SingletonSession {
+	private static SingletonSession instance;
+	
+	
+	protected SingletonSession()
+	{}
+	
+	public static synchronized SingletonSession getInstance(){
+		if(instance==null)
+			instance=new SingletonSession();
+		return instance;
+		
+	}
+
+}
