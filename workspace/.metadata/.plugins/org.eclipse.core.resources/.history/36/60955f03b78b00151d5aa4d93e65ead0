@@ -12,7 +12,7 @@ public class IUTException extends ApplicationSession{
 
 	}
 	public IUTException(IUTException e) {
-		super (e.instance().getGUILogger());
+		super (e.instance().getGUILogger().);
 		// Logger une erreur avec le message contenu dans 'e'  en utilisant le singleton session, ie le logger défini dans la session */
 	}
 	public IUTException(String message) {
