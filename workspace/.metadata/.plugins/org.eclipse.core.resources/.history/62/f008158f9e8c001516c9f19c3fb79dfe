@@ -17,8 +17,7 @@ public class ApplicationSession {
 	protected Logger sessionExceptionLogger;
 	static ApplicationSession session = null;
 	
-	
-	private ApplicationSession() {
+	protected ApplicationSession() {
 		/* Definir US comme locale par défaut */
 		Locale.setDefault(Locale.US);
 		
@@ -27,10 +26,19 @@ public class ApplicationSession {
 		
 		sessionGuiLogger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 		sessionGuiLogger.setLevel(Level.ALL);
-		sessionExceptionLogger = Logger.getLogger("IUTException");
+		sessionExceptionLogger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 		sessionExceptionLogger.setLevel(Level.ALL);
 	}
 	
+	
+	public ApplicationSession(String message) {
+		
+	}
+
+
+	
+
+
 	public static ApplicationSession instance() {
 		if (session == null) {			
 			session = new ApplicationSession();

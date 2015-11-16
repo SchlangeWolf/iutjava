@@ -3,7 +3,7 @@ package edu.iut.exceptions;
 import edu.iut.app.ApplicationSession;
 
 // Exercice 2 
-public class IUTException extends Exception{
+public class IUTException extends ApplicationSession{
 	public IUTException() {
 		super();
 		// Logger une erreur avec le message empty en utilisant le singleton session, ie le logger défini dans la session */

@@ -12,7 +12,7 @@ public class WeekPanel extends EventPanel {
 	// Exercice 4
 	public enum WeekDayNames {
 		EMPTYDAY("",""),
-		MONDAY(ApplicationSession.instance().getString("Monday"),ApplicationSession.instance().getString("Mon")),
+		LUNDI(ApplicationSession.instance().getString("Monday"),ApplicationSession.instance().getString("Mon")),
 		TUESDAY(ApplicationSession.instance().getString("Tuesday"),ApplicationSession.instance().getString("Tue")),
 		WEDNESDAY(ApplicationSession.instance().getString("Wednesday"),ApplicationSession.instance().getString("Wed")),
 		THURSDAY(ApplicationSession.instance().getString("Thursday"),ApplicationSession.instance().getString("Thu")),

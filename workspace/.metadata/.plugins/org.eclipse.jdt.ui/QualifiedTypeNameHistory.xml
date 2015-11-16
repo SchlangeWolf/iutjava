@@ -4,6 +4,6 @@
 <fullyQualifiedTypeName name="java.util.logging.Level"/>
 <fullyQualifiedTypeName name="java.util.ResourceBundle"/>
 <fullyQualifiedTypeName name="edu.iut.app.SingletonSession"/>
-<fullyQualifiedTypeName name="edu.iut.app.ApplicationSession"/>
 <fullyQualifiedTypeName name="java.util.logging.Logger"/>
+<fullyQualifiedTypeName name="edu.iut.app.ApplicationSession"/>
 </qualifiedTypeNameHistroy>
