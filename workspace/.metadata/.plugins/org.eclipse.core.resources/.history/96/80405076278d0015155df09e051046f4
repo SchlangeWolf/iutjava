@@ -11,7 +11,7 @@ public class ApplicationSession {
 	protected  ResourceBundle resourceBundle;
 	protected Locale locale;
 	
-	//bonjour
+	
 	// Exercice 2 : Logger
 	protected Logger sessionGuiLogger;
 	protected Logger sessionExceptionLogger;
