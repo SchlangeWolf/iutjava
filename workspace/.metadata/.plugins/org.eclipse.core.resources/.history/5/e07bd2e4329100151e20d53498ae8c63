@@ -2,12 +2,6 @@ package edu.iut.app;
 
 public class Person {
 	
-	protected PersonFunction personFunction;
-	protected String firstname;
-	protected String lastname;
-	protected String email;
-	protected String phone;
-	
 	public enum PersonFunction{
 		/* EX2 : Internationalisation */
 		NONE("None"),
@@ -75,7 +69,11 @@ public class Person {
 	}
 
 	
-	
+	protected PersonFunction personFunction;
+	protected String firstname;
+	protected String lastname;
+	protected String email;
+	protected String phone;
 	
 
 }
