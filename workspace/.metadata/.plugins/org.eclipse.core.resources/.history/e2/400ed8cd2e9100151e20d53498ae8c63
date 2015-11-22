@@ -44,35 +44,6 @@ public class CommandLineParser {
 							parseErrors.add("Option should have a key and a value.");
 						}
 						break;
-					case INTEGER:
-						CommandLineOption<Integer> intergerOption = (CommandLineOption<Integer>)options.get(keyValue[0]);
-						if (keyValue.length == 2) {
-							intergerOption.setValue(new Integer(keyValue[1]));
-						}
-						else {
-							parseErrors.add("Option should have a key and a value.");
-						}
-						break;
-					case DOUBLE:
-						CommandLineOption<Double> doubleOption = (CommandLineOption<Double>)options.get(keyValue[0]);
-						if (keyValue.length == 2) {
-							doubleOption.setValue(new Double(keyValue[1]));
-						}
-						else {
-							parseErrors.add("Option should have a key and a value.");
-						}
-						break;
-					/*
-					case NOVALUE:
-						CommandLineOption<NoValue> doubleOption = (CommandLineOption<Double>)options.get(keyValue[0]);
-						if (keyValue.length == 2) {
-							doubleOption.setValue(new Double(keyValue[1]));
-						}
-						else {
-							parseErrors.add("Option should have a key and a value.");
-						}
-						break;
-					*/
 					default:
 						parseErrors.add("Unrecognize option type.");						
 				}
