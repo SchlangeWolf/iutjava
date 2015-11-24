@@ -1,0 +1,8 @@
+package edu.iut.gui.frames;
+
+import java.awt.Frame;
+
+public class Menu extends Frame {
+	
+
+}

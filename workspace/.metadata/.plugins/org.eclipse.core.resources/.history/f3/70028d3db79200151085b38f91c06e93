@@ -1,0 +1,21 @@
+package edu.iut.gui.frames;
+
+import java.awt.Frame;
+
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+
+public class Menu extends Frame {
+	JMenuBar menuBar;
+	JMenu menu, submenu;
+	JMenuItem menuItem;
+	JRadioButtonMenuItem rbMenuItem;
+	JCheckBoxMenuItem cbMenuItem;
+	
+
+
+	
+	
+
+}
