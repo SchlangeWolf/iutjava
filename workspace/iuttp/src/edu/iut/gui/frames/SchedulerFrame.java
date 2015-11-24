@@ -46,17 +46,113 @@ public class SchedulerFrame extends JFrame {
 		this.setContentPane(splitPane);
 		
 		JMenuBar menuBar = new JMenuBar();
-		JMenu menu;		
+		JMenu menu;
+		JMenu menuEdition;
+		JMenu menuView;
+		JMenu menuAide;
+		
 		JMenuItem menuItem;
+		
 		
 		/* File Menu */
 		/** EX4 : MENU : UTILISER L'AIDE FOURNIE DANS LE TP**/
 		
 		
+		
 		menu = new JMenu("File");
+		menuEdition= new JMenu("Edit");
+		menuView= new JMenu("View");
+		menuAide= new JMenu("Help");
 		
 		
+		JMenuItem menuItem1=new JMenuItem("Load");
+		JMenuItem menuItem2=new JMenuItem("Save");
+		JMenuItem menuItem3=new JMenuItem("Quit");
+		
+		JMenuItem menuItem4=new JMenuItem("View");
+		JMenuItem menuItem5=new JMenuItem("Month");
+		JMenuItem menuItem6=new JMenuItem("Week");
+		JMenuItem menuItem7=new JMenuItem("Day");
+		
+		JMenuItem menuItem8=new JMenuItem("Display");
+		JMenuItem menuItem9=new JMenuItem("About");
+		
+		menuItem1.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				
+				JOptionPane.showMessageDialog(null,"Fonctionnalité pas prêt !");
+				
+			}
+		});
+		
+		menuItem2.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				
+				JOptionPane.showMessageDialog(null,"Fonctionnalité pas prêt !");
+				
+			}
+		});
+		
+		menuItem3.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				
+				dispose();
+				
+			}
+		});
+		
+		menuItem8.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				
+				JOptionPane.showMessageDialog(null,"Fonctionnalité pas prêt !");
+				
+			}
+		});
+		
+		menuItem9.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				
+				JOptionPane.showMessageDialog(null,"Fonctionnalité pas prêt !");
+				
+			}
+		});
+		
+		
+		menu.add(menuItem2);
+		menu.add(menuItem3);
+		
+		menuView.add(menuItem5);
+		menuView.add(menuItem6);
+		menuView.add(menuItem7);
+		
+		menuEdition.add(menuView);
+		
+		menuAide.add(menuItem8);
+		menuAide.add(menuItem9);
+		
+		menuBar.add(menu);
+		menuBar.add(menuEdition);
+		menuBar.add(menuAide);
+		menuBar.add(menu);
+		menuBar.add(menuEdition);
+		menuBar.add(menuAide);
 		this.setJMenuBar(menuBar);
+		this.setVisible(true);
 		this.pack();
 		layerLayout.next(contentPane);
 	}
@@ -86,5 +182,13 @@ public class SchedulerFrame extends JFrame {
 		});
 		setupUI();
 	}
+	
+	public static void main(String[] args)
+	{
+		new SchedulerFrame();
+	}
+
+	
+	
 	
 }
