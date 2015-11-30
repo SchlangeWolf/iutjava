@@ -2,6 +2,8 @@ package edu.iut.app;
 
 public class Document {
 	
+	protected String documentURI;
+	
 	public Document() {
 		documentURI="";
 	}
@@ -17,5 +19,5 @@ public class Document {
 		return documentURI;
 	}
 	
-	protected String documentURI;
+	
 }

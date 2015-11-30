@@ -1,0 +1,22 @@
+package edu.iut.app;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class CritereStudent implements PersonCritere{
+
+	@Override
+	public List<Person> meetCriteria(List<Person> persons) {
+		// TODO Auto-generated method stub
+		List<Person> juryPersons = new ArrayList<Person>();
+		
+		for(Person pers : persons){
+			if(pers.getFunction().toString().equalsIgnoreCase("Jury")){
+				juryPersons.add(pers);
+			}
+		}
+		
+		return juryPersons;
+	}
+
+}

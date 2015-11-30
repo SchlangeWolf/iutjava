@@ -2,8 +2,10 @@ package edu.iut.app;
 
 public class Classroom {
 	
+	protected String classRoomNumber;
+	public static String noAffect = "not affected";
 	public Classroom() {
-		classRoomNumber="not affected";
+		classRoomNumber=noAffect;
 	}
 	public Classroom(String classRoomNumber) {
 		/* EX2: AFFECTATION */;
@@ -18,5 +20,5 @@ public class Classroom {
 		return classRoomNumber;
 	}
 	
-	protected String classRoomNumber;
+	
 }
