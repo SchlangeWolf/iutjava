@@ -1,0 +1,227 @@
+package edu.iut.gui.frames;
+
+import java.awt.CardLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JSpinner;
+import javax.swing.JSplitPane;
+import javax.swing.SpinnerNumberModel;
+
+import edu.iut.app.ApplicationSession;
+import edu.iut.gui.widget.agenda.AgendaPanelFactory;
+import edu.iut.gui.widget.agenda.ControlAgendaViewPanel;
+import edu.iut.gui.widget.agenda.AgendaPanelFactory.ActiveView;
+
+
+public class SchedulerFrame extends JFrame implements ActionListener{
+	JPanel contentPane;
+	CardLayout layerLayout;
+	AgendaPanelFactory agendaPanelFactory;	
+	JPanel dayView;
+	JPanel weekView;
+	JPanel monthView;
+	JMenu menu;
+	JMenu menuEdition;
+	JMenu menuView;
+	JMenu menuAide;
+	JMenuItem menuItemLoad;
+	JMenuItem menuItemSave;
+	JMenuItem menuItemQuit;
+	
+	JMenuItem menuItemView;
+	JMenuItem menuItemMonth;
+	JMenuItem menuItemWeek;
+	JMenuItem menuItemDay;
+	
+	JMenuItem menuItemDisplay;
+	JMenuItem menuItemAbout;
+	
+	JMenuItem menuItem;
+	
+	protected void setupUI() {
+		
+		contentPane = new JPanel();
+		layerLayout = new CardLayout();
+		contentPane.setLayout(layerLayout);
+		ControlAgendaViewPanel agendaViewPanel = new ControlAgendaViewPanel(layerLayout,contentPane);
+		agendaPanelFactory = new AgendaPanelFactory();
+		dayView = agendaPanelFactory.getAgendaView(ActiveView.DAY_VIEW);
+		weekView = agendaPanelFactory.getAgendaView(ActiveView.WEEK_VIEW);
+		monthView = agendaPanelFactory.getAgendaView(ActiveView.MONTH_VIEW);
+		
+		contentPane.add(dayView,ActiveView.DAY_VIEW.name());
+		contentPane.add(weekView,ActiveView.WEEK_VIEW.name());
+		contentPane.add(monthView,ActiveView.MONTH_VIEW.name());
+	
+		JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT,agendaViewPanel, contentPane);
+		this.setContentPane(splitPane);
+		
+		JMenuBar menuBar = new JMenuBar();
+		
+		
+		
+		/* File Menu */
+		/** EX4 : MENU : UTILISER L'AIDE FOURNIE DANS LE TP**/
+		
+		
+		
+		
+		menu = new JMenu("File");
+		menuEdition= new JMenu("Edit");
+		menuView= new JMenu("View");
+		menuAide= new JMenu("Help");
+		
+		
+		menuItemLoad=new JMenuItem("Load");
+		 menuItemSave=new JMenuItem("Save");
+		 menuItemQuit=new JMenuItem("Quit");
+		
+		menuItemView=new JMenuItem("View");
+		menuItemMonth=new JMenuItem("Month");
+		menuItemWeek=new JMenuItem("Week");
+		menuItemDay=new JMenuItem("Day");
+		
+		menuItemDay.addActionListener(this);
+		
+		menuItemDisplay=new JMenuItem("Display");
+		menuItemAbout=new JMenuItem("About");
+		
+		menuItemLoad.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				
+				JOptionPane.showMessageDialog(null,"Fonctionnalité pas prêt !");
+				
+			}
+		});
+		
+		menuItemSave.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				
+				JOptionPane.showMessageDialog(null,"Fonctionnalité pas prêt !");
+				
+			}
+		});
+		
+		menuItemQuit.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				
+				dispose();
+				
+			}
+		});
+		
+		menuItemDisplay.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				
+				JOptionPane.showMessageDialog(null,"Fonctionnalité pas prêt !");
+				
+			}
+		});
+		
+		menuItemAbout.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				
+				
+				
+			}
+		});
+		
+		
+		menu.add(menuItemSave);
+		menu.add(menuItemQuit);
+		
+		menuView.add(menuItemMonth);
+		menuView.add(menuItemWeek);
+		menuView.add(menuItemDay);
+		
+		menuEdition.add(menuView);
+		
+		menuAide.add(menuItemDisplay);
+		menuAide.add(menuItemAbout);
+		
+		menuBar.add(menu);
+		menuBar.add(menuEdition);
+		menuBar.add(menuAide);
+		menuBar.add(menu);
+		menuBar.add(menuEdition);
+		menuBar.add(menuAide);
+		this.setJMenuBar(menuBar);
+		this.setVisible(true);
+		this.pack();
+		layerLayout.next(contentPane);
+	}
+	
+	public SchedulerFrame() {
+		super();
+		
+		addWindowListener (new WindowAdapter(){
+			public void windowClosing (WindowEvent e){
+				System.exit(0);
+			}
+		});
+		contentPane = null;
+		dayView = null;
+		weekView = null;
+		monthView = null;
+		agendaPanelFactory = null;
+		setupUI();
+
+	}
+	public SchedulerFrame(String title) {
+		super(title);
+		addWindowListener (new WindowAdapter(){
+			public void windowClosing (WindowEvent e){
+				System.exit(0);
+			}
+		});
+		setupUI();
+	}
+	
+	public static void main(String[] args)
+	{
+		new SchedulerFrame();
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		switch(e.getActionCommand())
+		{
+		case "Days":	layerLayout.show(contentPane, ActiveView.DAY_VIEW.name());
+		break;
+		}
+		if(e.getSource()==menuItemAbout)
+		{
+			JOptionPane.showMessageDialog(null,"Fonctionnalité pas prêt !");
+		}
+	}
+
+	
+	
+	
+}

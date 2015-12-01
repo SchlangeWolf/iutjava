@@ -6,26 +6,47 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JSpinner;
 import javax.swing.JSplitPane;
+import javax.swing.SpinnerNumberModel;
 
+import edu.iut.app.ApplicationSession;
 import edu.iut.gui.widget.agenda.AgendaPanelFactory;
 import edu.iut.gui.widget.agenda.ControlAgendaViewPanel;
 import edu.iut.gui.widget.agenda.AgendaPanelFactory.ActiveView;
 
 
-public class SchedulerFrame extends JFrame {
+public class SchedulerFrame extends JFrame implements ActionListener{
 	JPanel contentPane;
 	CardLayout layerLayout;
 	AgendaPanelFactory agendaPanelFactory;	
 	JPanel dayView;
 	JPanel weekView;
 	JPanel monthView;
+	JMenu menu;
+	JMenu menuEdition;
+	JMenu menuView;
+	JMenu menuAide;
+	JMenuItem menuItemLoad;
+	JMenuItem menuItemSave;
+	JMenuItem menuItemQuit;
+	
+	JMenuItem menuItemView;
+	JMenuItem menuItemMonth;
+	JMenuItem menuItemWeek;
+	JMenuItem menuItemDay;
+	
+	JMenuItem menuItemDisplay;
+	JMenuItem menuItemAbout;
+	
+	JMenuItem menuItem;
 	
 	protected void setupUI() {
 		
@@ -46,16 +67,12 @@ public class SchedulerFrame extends JFrame {
 		this.setContentPane(splitPane);
 		
 		JMenuBar menuBar = new JMenuBar();
-		JMenu menu;
-		JMenu menuEdition;
-		JMenu menuView;
-		JMenu menuAide;
 		
-		JMenuItem menuItem;
 		
 		
 		/* File Menu */
 		/** EX4 : MENU : UTILISER L'AIDE FOURNIE DANS LE TP**/
+		
 		
 		
 		
@@ -65,85 +82,44 @@ public class SchedulerFrame extends JFrame {
 		menuAide= new JMenu("Help");
 		
 		
-		JMenuItem menuItem1=new JMenuItem("Load");
-		JMenuItem menuItem2=new JMenuItem("Save");
-		JMenuItem menuItem3=new JMenuItem("Quit");
+		menuItemLoad=new JMenuItem("Load");
+		menuItemSave=new JMenuItem("Save");
+		menuItemQuit=new JMenuItem("Quit");
 		
-		JMenuItem menuItem4=new JMenuItem("View");
-		JMenuItem menuItem5=new JMenuItem("Month");
-		JMenuItem menuItem6=new JMenuItem("Week");
-		JMenuItem menuItem7=new JMenuItem("Day");
+		menuItemView=new JMenuItem("View");
+		menuItemMonth=new JMenuItem("Month");
+		menuItemWeek=new JMenuItem("Week");
+		menuItemDay=new JMenuItem("Day");
 		
-		JMenuItem menuItem8=new JMenuItem("Display");
-		JMenuItem menuItem9=new JMenuItem("About");
+		menuItemDay.addActionListener(this);
+		menuItemMonth.addActionListener(this);
+		menuItemWeek.addActionListener(this);
 		
-		menuItem1.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				
-				JOptionPane.showMessageDialog(null,"Fonctionnalité pas prêt !");
-				
-			}
-		});
+		menuItemDisplay=new JMenuItem("Display");
+		menuItemAbout=new JMenuItem("About");
 		
-		menuItem2.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				
-				JOptionPane.showMessageDialog(null,"Fonctionnalité pas prêt !");
-				
-			}
-		});
+		menuItemLoad.addActionListener(this);
 		
-		menuItem3.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				
-				dispose();
-				
-			}
-		});
+		menuItemSave.addActionListener(this);
 		
-		menuItem8.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				
-				JOptionPane.showMessageDialog(null,"Fonctionnalité pas prêt !");
-				
-			}
-		});
+		menuItemQuit.addActionListener(this);
 		
-		menuItem9.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				
-				JOptionPane.showMessageDialog(null,"Fonctionnalité pas prêt !");
-				
-			}
-		});
+		menuItemDisplay.addActionListener(this);
+		
+		menuItemAbout.addActionListener(this);
 		
 		
-		menu.add(menuItem2);
-		menu.add(menuItem3);
+		menu.add(menuItemSave);
+		menu.add(menuItemQuit);
 		
-		menuView.add(menuItem5);
-		menuView.add(menuItem6);
-		menuView.add(menuItem7);
+		menuView.add(menuItemMonth);
+		menuView.add(menuItemWeek);
+		menuView.add(menuItemDay);
 		
 		menuEdition.add(menuView);
 		
-		menuAide.add(menuItem8);
-		menuAide.add(menuItem9);
+		menuAide.add(menuItemDisplay);
+		menuAide.add(menuItemAbout);
 		
 		menuBar.add(menu);
 		menuBar.add(menuEdition);
@@ -186,6 +162,25 @@ public class SchedulerFrame extends JFrame {
 	public static void main(String[] args)
 	{
 		new SchedulerFrame();
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		switch(e.getActionCommand())
+		{
+		case "Day":		layerLayout.show(contentPane, ActiveView.DAY_VIEW.name());break;
+		case "Month":	layerLayout.show(contentPane, ActiveView.MONTH_VIEW.name());break;
+		case "Week":	layerLayout.show(contentPane, ActiveView.WEEK_VIEW.name());break;
+		}
+		if(e.getSource()==menuItemAbout || e.getSource()==menuItemDisplay || e.getSource()==menuItemSave || e.getSource()==menuItemLoad)
+		{
+			JOptionPane.showMessageDialog(null,"Fonctionnalité pas prêt !");
+		}
+		if(e.getSource()==menuItemQuit)
+		{
+			dispose();
+		}
 	}
 
 	

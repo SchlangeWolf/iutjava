@@ -24,12 +24,22 @@ public class ControlAgendaViewPanel extends JPanel {
 	int selectedYear;
 	int selectedMonth;
 	int selectedDay;
+	JSpinner annee;
+	JComboBox<String>mois;
+	JComboBox<String>jour;
 	
 	public ControlAgendaViewPanel(CardLayout layerLayout, final JPanel contentPane) {
 
 		this.agendaViewLayout = layerLayout;
 		this.contentPane = contentPane;
 		/** EX3: REMPLACEMENT DU BOUTON NEXT */
+		annee= new JSpinner(new SpinnerNumberModel(2015, 2010, 2020, 1));
+		add(annee);
+		mois= new JComboBox<String> (ApplicationSession.instance().getMonths());
+		add(mois);
+		jour= new JComboBox<String> (ApplicationSession.instance().getDays());
+		add(jour);
+		
 	}
 	
 	public int getYear() {
@@ -41,5 +51,21 @@ public class ControlAgendaViewPanel extends JPanel {
 	public int getDay() {
 		return selectedDay;
 	}
+
+	
+	/*public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		if(e.getSource()==mois)
+		{
+			String nom=(String)annee.getSelectedItem();
+		}
+		JComboBox cb = (JComboBox)e.getSource();
+        String petName = (String)cb.getSelectedItem();
+        updateLabel(petName);
+		
+	}*/
+	
+	
+
 	
 }
