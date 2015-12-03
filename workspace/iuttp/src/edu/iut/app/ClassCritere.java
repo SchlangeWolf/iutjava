@@ -1,7 +1,13 @@
 package edu.iut.app;
 
 import java.util.List;
-
+/**
+* <b>ClassCritere est l'interface qui permet de créer des classes de classement par Critère des classes</b>
+* @see ClassRoom
+* @see List
+* @author Schlange
+*
+*/
 public interface ClassCritere {
 	public List<Classroom> meetCriteria(List<Classroom> room);
 }

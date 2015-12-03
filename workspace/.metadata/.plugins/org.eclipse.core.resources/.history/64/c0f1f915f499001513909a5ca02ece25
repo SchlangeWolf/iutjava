@@ -1,0 +1,25 @@
+package edu.iut.app;
+
+import java.util.LinkedList;
+/**
+ * <b>Agenda est la classe contenant tous les ExamEvents dans une list
+ * @see ExamEvent
+ * @see LinkedList
+ * @author Schlange
+ *
+ */
+
+public class Agenda extends LinkedList<ExamEvent> {
+
+	public Agenda() {	
+	}
+	
+	public Agenda(LinkedList<ExamEvent> exams){
+		super(exams);
+	}
+	
+	public void addCheckedEvent(ExamEvent examEvent) {
+		this.add(examEvent);
+	}
+	
+}

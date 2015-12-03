@@ -1,0 +1,37 @@
+package edu.iut.app;
+
+/**
+ * <b>Cette classe permet d'initialiser les classes dans lesquelles se dérouleront les examens</b>
+ * @author Schlange
+ *
+ */
+public class Classroom {
+	/**
+	 * Représente le numéro de la salle
+	 */
+	protected String classRoomNumber;
+	/**
+	 * Si la classe n'a pas de numéro ou n'est pas encore affectée
+	 */
+	public static String noAffect = "not affected";
+	/**
+	 * Création d'une classe n'ayant pas de numéro ou n'étant pas encore affectée
+	 */
+	public Classroom() {
+		classRoomNumber=noAffect;
+	}
+	public Classroom(String classRoomNumber) {
+		/* EX2: AFFECTATION */;
+		this.classRoomNumber=classRoomNumber;
+	}
+	
+	public void setClassroomNumber(String number) {
+		/* EX2: AFFECTATION */;
+		this.classRoomNumber=number;
+	}
+	public String getClassRoomNumber() {
+		return classRoomNumber;
+	}
+	
+	
+}
