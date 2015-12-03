@@ -4,14 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ExamEventStudent implements CritereExamEvent {
-
+	
+	private ExamEvent exa;
+	public ExamEventStudent(ExamEvent exam) {
+		// TODO Auto-generated constructor stub
+		this.exa=exam;
+	}
 	@Override
-	public List<ExamEvent> meetCriteria(List<ExamEvent> examevent, ExamEvent exam) {
+	public List<ExamEvent> meetCriteria(List<ExamEvent> examevent) {
 		
 		List<ExamEvent> StudentExamEvent = new ArrayList<ExamEvent>();
 		
 		for(ExamEvent exams : examevent){
-			if(exams.getStudent().toString()==exam.getStudent().toString()){
+			if(exams.getStudent().toString()==this.exa.getStudent().toString()){
 				StudentExamEvent.add(exams);
 			}
 		}

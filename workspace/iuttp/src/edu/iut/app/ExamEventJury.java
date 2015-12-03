@@ -4,14 +4,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ExamEventJury implements CritereExamEvent {
+	
+	private ExamEvent exa;
+	
+	public ExamEventJury(ExamEvent exam) {
+		// TODO Auto-generated constructor stub
+		this.exa=exam;
+	}
 
 	@Override
-	public List<ExamEvent> meetCriteria(List<ExamEvent> examevent, ExamEvent exam) {
+	public List<ExamEvent> meetCriteria(List<ExamEvent> examevent) {
 		
 		List<ExamEvent> JuryExamEvent = new ArrayList<ExamEvent>();
 		
 		for(ExamEvent exams : examevent){
-			if(exams.getJury().toString()==exam.getJury().toString()){
+			if(exams.getJury().toString()==this.exa.getJury().toString()){
 				JuryExamEvent.add(exams);
 			}
 		}

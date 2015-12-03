@@ -4,14 +4,27 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ExamEventDate implements CritereExamEvent {
-
+	
+	private ExamEvent exa;
+	public ExamEventDate(ExamEvent exam) {
+		this.exa=exam;
+	}
+	
+	public ExamEvent getExa() {
+		return exa;
+	}
+	
+	public void setExa(ExamEvent exa) {
+		this.exa = exa;
+	}
+	
 	@Override
-	public List<ExamEvent> meetCriteria(List<ExamEvent>examevent,ExamEvent exam) {
+	public List<ExamEvent> meetCriteria(List<ExamEvent>examevent) {
 		// TODO Auto-generated method stub
 		List<ExamEvent> DateExamEvent = new ArrayList<ExamEvent>();
 		
 		for(ExamEvent exams : examevent){
-			if(exams.getExamDate().toString()==exam.getExamDate().toString()){
+			if(exams.getExamDate().toString()==this.exa.getExamDate().toString()){
 				DateExamEvent.add(exams);
 			}
 		}

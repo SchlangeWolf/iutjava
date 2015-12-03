@@ -1,0 +1,49 @@
+package edu.iut.app;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ExamEventClassroom implements CritereExamEvent{
+		
+	private ExamEvent exa;
+	
+	public ExamEventClassroom(ExamEvent exam) {
+		// TODO Auto-generated constructor stub
+		this.exa=exam;
+		
+	}
+	
+	public ExamEvent getExa() {
+		return exa;
+	}
+
+	public void setExa(ExamEvent exa) {
+		this.exa = exa;
+	}
+
+	@Override
+	public List<ExamEvent> meetCriteria(List<ExamEvent> exam) {
+		
+		List<ExamEvent> ClassroomExamEvent = new ArrayList<ExamEvent>();
+		
+		for(ExamEvent exams : examevent){
+			if(exams.getClassroom().toString()==exam.getClassroom().toString()){
+				ClassroomExamEvent.add(exams);
+			}
+		}
+		
+		return ClassroomExamEvent;
+	}
+	
+	public List<Classroom> meetCriteria(List<Classroom> room) {
+		// TODO Auto-generated method stub
+		List<Classroom> ret = new ArrayList<Classroom>();
+		for(Classroom clas : room){
+			if(clas.getClassRoomNumber().equalsIgnoreCase(this.clas.getClassRoomNumber()) && !(clas.getClassRoomNumber().equalsIgnoreCase(Classroom.noAffect))){
+				ret.add(clas);
+			}
+		}
+		return ret;
+	}
+
+}

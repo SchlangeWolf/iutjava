@@ -1,0 +1,26 @@
+package edu.iut.app;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ExamEventStudent implements CritereExamEvent {
+	
+	public ExamEventStudent(ExamEvent exam) {
+		// TODO Auto-generated constructor stub
+		this.exa=exam;
+	}
+	@Override
+	public List<ExamEvent> meetCriteria(List<ExamEvent> examevent) {
+		
+		List<ExamEvent> StudentExamEvent = new ArrayList<ExamEvent>();
+		
+		for(ExamEvent exams : examevent){
+			if(exams.getStudent().toString()==this.exa.getStudent().toString()){
+				StudentExamEvent.add(exams);
+			}
+		}
+		
+		return StudentExamEvent;
+	}
+
+}

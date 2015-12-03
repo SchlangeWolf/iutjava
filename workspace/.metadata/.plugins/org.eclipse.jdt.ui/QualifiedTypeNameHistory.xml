@@ -18,4 +18,5 @@
 <fullyQualifiedTypeName name="javax.swing.JComboBox"/>
 <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
 <fullyQualifiedTypeName name="edu.iut.gui.widget.agenda.AgendaPanelFactory.ActiveView"/>
+<fullyQualifiedTypeName name="edu.iut.app.ExamEvent"/>
 </qualifiedTypeNameHistroy>
