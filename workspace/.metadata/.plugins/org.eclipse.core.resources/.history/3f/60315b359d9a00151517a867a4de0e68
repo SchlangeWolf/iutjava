@@ -1,0 +1,25 @@
+package edu.iut.gui.frames;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class InfoFrame extends JFrame implements ActionListener{ 
+	
+	private JLabel student;
+	private JLabel jury;
+
+	
+	public InfoFrame()
+	{
+		
+	}
+}
+
+@Override
+public void actionPerformed(ActionEvent e) {
+	// TODO Auto-generated method stub
+	
+}

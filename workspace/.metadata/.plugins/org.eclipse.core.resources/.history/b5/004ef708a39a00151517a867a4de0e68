@@ -1,0 +1,96 @@
+package edu.iut.gui.frames;
+
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class InfoFrame extends JFrame implements ActionListener{ 
+	
+	private JFrame frame;
+	
+	private JLabel student;
+	private JLabel jury;
+	private JLabel date;
+	private JLabel classroom;
+	
+	private JButton creer;
+	
+	private JTextField etudiant;
+	private JTextField jr;
+	private JTextField dat;
+	private JTextField salle;
+	
+	private JPanel pnllbl;
+	private JPanel pnlbtn;
+
+	
+	public InfoFrame()
+	{
+		frame=new JFrame("Information examen");
+		
+		pnllbl=new JPanel();
+		pnlbtn=new JPanel();
+		
+		student=new JLabel("Student name:");
+		etudiant=new JTextField(20);
+		
+		jury=new JLabel("Jury number:");
+		jr=new JTextField(3);
+		
+		date=new JLabel("Date :");
+		dat=new JTextField(10);
+		
+		classroom=new JLabel("Classroom number :");
+		salle=new JTextField(3);
+		
+		creer=new JButton("Creer examen");
+		creer.addActionListener(this);
+		
+		pnllbl.add(student);
+		pnllbl.add(etudiant);
+		
+		pnllbl.add(jury);
+		pnllbl.add(jr);
+		
+		pnllbl.add(date);
+		pnllbl.add(dat);
+		
+		pnllbl.add(classroom);
+		pnllbl.add(salle);
+		pnlbtn.add(creer);
+
+		
+		frame.setVisible(true);
+		
+		frame.pack();
+		frame.setSize(500, 190);
+		frame.setLocationRelativeTo(null);
+		frame.setLayout(new BorderLayout());
+		frame.add(pnllbl,BorderLayout.CENTER);
+		frame.add(pnlbtn,BorderLayout.SOUTH);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		pnllbl.setLayout(new GridLayout(5,2));	
+
+		
+	}
+	
+	public static void main(String args[])
+	{
+		new InfoFrame();
+		
+	}
+
+
+@Override
+public void actionPerformed(ActionEvent e) {
+	// TODO Auto-generated method stub
+	
+}
+}

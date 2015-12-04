@@ -1,0 +1,184 @@
+package edu.iut.gui.frames;
+
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class InfoFrame extends JFrame implements ActionListener{ 
+	
+	private JFrame frame;
+	
+	private JLabel student;
+	private JLabel jury;
+	private JLabel date;
+	private JLabel classroom;
+	
+	private JButton creer;
+	
+	private JTextField etudiant;
+	private JTextField jr;
+	private JTextField dat;
+	private JTextField salle;
+	
+	private JPanel pnllbl;
+	private JPanel pnlbtn;
+
+	
+	public InfoFrame()
+	{
+		this.mara = marathon;
+		this.fenetre =new JFrame("Inscription");
+		
+		//Initialisation des JPanels
+		pnllbl=new JPanel();
+		pnlbtn=new JPanel();
+		
+		//Initialisation des JLabels et des JTextfields
+		JLabel nom=new JLabel("Nom :");
+		nomtxt=new JTextField(20);
+		
+		
+		JLabel prenom=new JLabel("Prenom :");
+		prenomtxt=new JTextField(20);
+		
+		JLabel date=new JLabel("Date de naissance");
+		datetxt=new JTextField(20);
+		
+		JLabel mail=new JLabel("email :");
+		mailtxt=new JTextField(20);
+		
+		JLabel adresse=new JLabel("Adresse :");
+		adresstxt=new JTextField(20);
+		
+		JLabel sexe=new JLabel("Sexe :");
+		sexetxt=new JTextField(1);
+		
+		
+		JLabel cp=new JLabel("Code postal:");
+		cptxt=new JTextField(7);
+		
+		
+		JLabel ville=new JLabel("Ville :");
+		villetxt=new JTextField(20);
+		
+		
+		JLabel etat=new JLabel("Etat :");
+		etatxt=new JTextField(20);
+		
+		
+		JLabel pays=new JLabel("Pays :");
+		paystxt=new JTextField(20);
+		
+		JLabel nationnalite=new JLabel("Nationnalité :");
+		nationnalitetxt=new JTextField(12);
+		
+		
+		JLabel tel=new JLabel("Téléphone :");
+		teltxt=new JTextField(20);
+		
+		
+		JLabel club=new JLabel("Club :");
+		clubtxt=new JTextField(20);
+		
+		
+		JLabel licence=new JLabel("Numéro de licence :");
+		licencetxt=new JTextField(20);
+		
+		
+		JLabel entreprise=new JLabel("Nom entreprise ou école :");
+		entreprtxt=new JTextField(20);
+		
+		//Initialisation des JButtons et ajout d'écouteur
+		btninscrire=new JButton("S'inscrire");
+		btninscrire.addActionListener(this);
+		
+		btnannuler=new JButton("Annuler");
+		btnannuler.addActionListener(this);
+		
+		//Ajout des JLabels,JTextfields et JButton aux JPanels
+		pnllbl.add(nom);
+		pnllbl.add(nomtxt);
+		
+		pnllbl.add(prenom);
+		pnllbl.add(prenomtxt);
+		
+		pnllbl.add(date);
+		pnllbl.add(datetxt);
+		
+		pnllbl.add(mail);
+		pnllbl.add(mailtxt);
+		
+		pnllbl.add(sexe);
+		pnllbl.add(sexetxt);
+		
+		
+		pnllbl.add(adresse);
+		pnllbl.add(adresstxt);
+		
+		pnllbl.add(cp);
+		pnllbl.add(cptxt);
+		
+		pnllbl.add(ville);
+		pnllbl.add(villetxt);
+		
+		pnllbl.add(etat);
+		pnllbl.add(etatxt);
+		
+		pnllbl.add(pays);
+		pnllbl.add(paystxt);
+		
+		pnllbl.add(nationnalite);
+		pnllbl.add(nationnalitetxt);
+		
+		pnllbl.add(tel);
+		pnllbl.add(teltxt);
+		
+		pnllbl.add(club);
+		pnllbl.add(clubtxt);
+		
+		pnllbl.add(licence);
+		pnllbl.add(licencetxt);
+		
+		pnllbl.add(entreprise);
+		pnllbl.add(entreprtxt);
+		
+		pnlbtn.add(btninscrire);
+		pnlbtn.add(btnannuler);
+		
+		
+		//Paramètre JFrame
+		fenetre.setVisible(true);
+		fenetre.setResizable(false);
+		fenetre.pack();
+		fenetre.setSize(500, 400);
+		fenetre.setLocationRelativeTo(null);
+		fenetre.setLayout(new BorderLayout());
+		fenetre.add(pnllbl,BorderLayout.CENTER);
+		fenetre.add(pnlbtn,BorderLayout.SOUTH);
+		fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		pnllbl.setLayout(new GridLayout(15,2));	
+
+		
+	}
+	
+	public static void main(String args[])
+	{
+		new InfoFrame();
+		
+	}
+
+
+@Override
+public void actionPerformed(ActionEvent e) {
+	// TODO Auto-generated method stub
+	
+}
+}

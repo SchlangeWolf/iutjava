@@ -181,6 +181,7 @@ public class SchedulerFrame extends JFrame implements ActionListener{
 		{
 			dispose();
 		}
+		
 	}
 
 	

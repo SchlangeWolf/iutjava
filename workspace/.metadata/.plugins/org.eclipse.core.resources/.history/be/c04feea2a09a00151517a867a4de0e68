@@ -1,0 +1,69 @@
+package edu.iut.gui.frames;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class InfoFrame extends JFrame implements ActionListener{ 
+	
+	private JFrame frame;
+	
+	private JLabel student;
+	private JLabel jury;
+	private JLabel date;
+	private JLabel classroom;
+	
+	private JButton creer;
+	
+	private JTextField etudiant;
+	private JTextField jr;
+	private JTextField dat;
+	private JTextField salle;
+	
+	private JPanel pnllbl;
+	private JPanel pnlbtn;
+
+	
+	public InfoFrame()
+	{
+		frame=new JFrame("Information examen");
+		
+		student=new JLabel("Student name:");
+		etudiant=new JTextField(20);
+		
+		jury=new JLabel("Jury number:");
+		jr=new JTextField(3);
+		
+		date=new JLabel("Date :");
+		dat=new JTextField(10);
+		
+		classroom=new JLabel("Classroom number :");
+		etudiant=new JTextField(20);
+		
+		creer=new JButton("Créer examen");
+		
+		pnllbl.add(student);
+		pnllbl.add(etudiant);
+		
+		pnllbl.add(jury);
+		pnllbl.add(jr);
+		
+		pnllbl.add(date);
+		pnllbl.add(dat);
+		
+		pnllbl.add(classroom);
+		pnllbl.add(salle);
+	}
+
+
+@Override
+public void actionPerformed(ActionEvent e) {
+	// TODO Auto-generated method stub
+	
+}
+}

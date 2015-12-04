@@ -8,6 +8,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 import javax.swing.BoxLayout;
+import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JSpinner;
 import javax.swing.JPanel;
@@ -27,6 +28,9 @@ public class ControlAgendaViewPanel extends JPanel {
 	JSpinner annee;
 	JComboBox<String>mois;
 	JComboBox<String>jour;
+	JButton creer;
+	JButton supprimer;
+	
 	
 	public ControlAgendaViewPanel(CardLayout layerLayout, final JPanel contentPane) {
 
@@ -39,6 +43,10 @@ public class ControlAgendaViewPanel extends JPanel {
 		add(mois);
 		jour= new JComboBox<String> (ApplicationSession.instance().getDays());
 		add(jour);
+		creer=new JButton("Create an exam");
+		supprimer=new JButton("Delete an exam");
+		add(creer);
+		add(supprimer);
 		
 	}
 	
@@ -53,17 +61,7 @@ public class ControlAgendaViewPanel extends JPanel {
 	}
 
 	
-	/*public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		if(e.getSource()==mois)
-		{
-			String nom=(String)annee.getSelectedItem();
-		}
-		JComboBox cb = (JComboBox)e.getSource();
-        String petName = (String)cb.getSelectedItem();
-        updateLabel(petName);
-		
-	}*/
+	
 	
 	
 

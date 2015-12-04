@@ -1,0 +1,40 @@
+package edu.iut.gui.frames;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class InfoFrame extends JFrame implements ActionListener{ 
+	
+	private JFrame frame;
+	
+	private JLabel student;
+	private JLabel jury;
+	private JLabel date;
+	private JLabel classroom;
+	
+	private JButton creer;
+	
+	private JTextField etudiant;
+	private JTextField jr;
+	private JTextField dat;
+	private JTextField salle;
+
+	
+	public InfoFrame()
+	{
+		frame=new JFrame("Information examen");
+		creer=new JButton("Créer examen");
+	}
+
+
+@Override
+public void actionPerformed(ActionEvent e) {
+	// TODO Auto-generated method stub
+	
+}
+}
