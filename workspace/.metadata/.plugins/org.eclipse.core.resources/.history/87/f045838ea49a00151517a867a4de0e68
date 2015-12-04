@@ -121,7 +121,6 @@ public class SchedulerFrame extends JFrame implements ActionListener{
 		menuAide.add(menuItemDisplay);
 		menuAide.add(menuItemAbout);
 		
-		
 		menuBar.add(menu);
 		menuBar.add(menuEdition);
 		menuBar.add(menuAide);
@@ -182,7 +181,6 @@ public class SchedulerFrame extends JFrame implements ActionListener{
 		{
 			dispose();
 		}
-		
 		
 	}
 

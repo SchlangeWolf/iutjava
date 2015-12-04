@@ -45,7 +45,6 @@ public class ControlAgendaViewPanel extends JPanel implements ActionListener {
 		jour= new JComboBox<String> (ApplicationSession.instance().getDays());
 		add(jour);
 		creer=new JButton("Create an exam");
-		creer.addActionListener(this);
 		supprimer=new JButton("Delete an exam");
 		add(creer);
 		add(supprimer);

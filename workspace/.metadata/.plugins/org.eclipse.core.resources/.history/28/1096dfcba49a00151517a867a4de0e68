@@ -16,9 +16,8 @@ import javax.swing.SpinnerNumberModel;
 import javax.swing.SpinnerModel;
 
 import edu.iut.app.ApplicationSession;
-import edu.iut.gui.frames.InfoFrame;
 
-public class ControlAgendaViewPanel extends JPanel implements ActionListener {
+public class ControlAgendaViewPanel extends JPanel {
 
 	CardLayout agendaViewLayout;
 	JPanel contentPane;
@@ -45,7 +44,6 @@ public class ControlAgendaViewPanel extends JPanel implements ActionListener {
 		jour= new JComboBox<String> (ApplicationSession.instance().getDays());
 		add(jour);
 		creer=new JButton("Create an exam");
-		creer.addActionListener(this);
 		supprimer=new JButton("Delete an exam");
 		add(creer);
 		add(supprimer);
@@ -60,16 +58,6 @@ public class ControlAgendaViewPanel extends JPanel implements ActionListener {
 	}
 	public int getDay() {
 		return selectedDay;
-	}
-
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		if(e.getSource()==creer)
-		{
-			new InfoFrame();
-		}
-		
 	}
 
 	

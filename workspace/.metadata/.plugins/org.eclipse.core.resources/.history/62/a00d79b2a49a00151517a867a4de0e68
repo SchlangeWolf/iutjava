@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
+import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
@@ -47,6 +48,9 @@ public class SchedulerFrame extends JFrame implements ActionListener{
 	JMenuItem menuItemAbout;
 	
 	JMenuItem menuItem;
+	
+	JButton creer;
+	JButton supprimer;
 	
 	protected void setupUI() {
 		
@@ -120,7 +124,10 @@ public class SchedulerFrame extends JFrame implements ActionListener{
 		
 		menuAide.add(menuItemDisplay);
 		menuAide.add(menuItemAbout);
-		
+		creer=new JButton("Create an exam");
+		supprimer=new JButton("Delete an exam");
+		add(creer);
+		add(supprimer);
 		
 		menuBar.add(menu);
 		menuBar.add(menuEdition);
