@@ -16,7 +16,6 @@ import javax.swing.SpinnerNumberModel;
 import javax.swing.SpinnerModel;
 
 import edu.iut.app.ApplicationSession;
-import edu.iut.app.ExamEvent;
 import edu.iut.gui.frames.InfoFrame;
 
 public class ControlAgendaViewPanel extends JPanel implements ActionListener {
@@ -68,7 +67,7 @@ public class ControlAgendaViewPanel extends JPanel implements ActionListener {
 		// TODO Auto-generated method stub
 		if(e.getSource()==creer)
 		{
-			new InfoFrame(new ExamEvent());
+			new InfoFrame();
 		}
 		
 	}

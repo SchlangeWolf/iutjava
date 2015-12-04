@@ -11,8 +11,6 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import edu.iut.app.ExamEvent;
-
 public class InfoFrame extends JFrame implements ActionListener{ 
 	
 	private JFrame frame;
@@ -31,13 +29,10 @@ public class InfoFrame extends JFrame implements ActionListener{
 	
 	private JPanel pnllbl;
 	private JPanel pnlbtn;
-	
-	private ExamEvent exam;
 
 	
-	public InfoFrame(ExamEvent exam)
-	{	
-		this.exam=exam;
+	public InfoFrame()
+	{
 		frame=new JFrame("Information examen");
 		
 		pnllbl=new JPanel();
@@ -87,22 +82,16 @@ public class InfoFrame extends JFrame implements ActionListener{
 	}
 	
 	public static void main(String args[])
-	{	
-		ExamEvent exam=new ExamEvent();
-		new InfoFrame(exam);
+	{
+		new InfoFrame();
 		
 	}
 
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		if (e.getSource()==creer)
-		{
-			
-		}
-	}
 
-
-
-
+@Override
+public void actionPerformed(ActionEvent e) {
+	// TODO Auto-generated method stub
+	
+	
+}
 }

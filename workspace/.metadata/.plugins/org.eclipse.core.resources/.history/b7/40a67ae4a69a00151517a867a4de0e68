@@ -93,16 +93,15 @@ public class InfoFrame extends JFrame implements ActionListener{
 		
 	}
 
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		if (e.getSource()==creer)
-		{
-			
-		}
+
+@Override
+public actionPerformed(ActionEvent e) {
+	// TODO Auto-generated method stub
+	if (e.getSource()==creer)
+	{
+		return this.exam;
 	}
-
-
-
-
+	
+	
+}
 }
