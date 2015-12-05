@@ -24,19 +24,17 @@ public class InfoFrame extends JFrame implements ActionListener{
 	private JLabel lastname;
 	private JLabel email;
 	private JLabel phone;
-	private JLabel jury;
 	private JLabel date;
 	private JLabel classroom;
 	private JLabel document;
 	
-	private JButton creer;
+	private JButton suivant;
 	
 	private JTextField fonction;
 	private JTextField nom;
 	private JTextField prenom;
 	private JTextField mail;
 	private JTextField tel;
-	private JTextField jr;
 	private JTextField dat;
 	private JTextField salle;
 	private JTextField doc;
@@ -70,9 +68,6 @@ public class InfoFrame extends JFrame implements ActionListener{
 		phone=new JLabel("Phone number :");
 		tel=new JTextField(10);
 		
-		jury=new JLabel("Jury number:");
-		jr=new JTextField(3);
-		
 		date=new JLabel("Date :");
 		dat=new JTextField(10);
 		
@@ -82,8 +77,8 @@ public class InfoFrame extends JFrame implements ActionListener{
 		document=new JLabel("Nom document:");
 		doc=new JTextField(10);
 		
-		creer=new JButton("Creer examen");
-		creer.addActionListener(this);
+		suivant=new JButton("Suivant");
+		suivant.addActionListener(this);
 		
 		pnllbl.add(function);
 		pnllbl.add(fonction);
@@ -100,9 +95,6 @@ public class InfoFrame extends JFrame implements ActionListener{
 		pnllbl.add(phone);
 		pnllbl.add(tel);
 		
-		pnllbl.add(jury);
-		pnllbl.add(jr);
-		
 		pnllbl.add(date);
 		pnllbl.add(dat);
 		
@@ -111,7 +103,7 @@ public class InfoFrame extends JFrame implements ActionListener{
 		
 		pnllbl.add(document);
 		pnllbl.add(doc);
-		pnlbtn.add(creer);
+		pnlbtn.add(suivant);
 
 		
 		frame.setVisible(true);
@@ -123,7 +115,7 @@ public class InfoFrame extends JFrame implements ActionListener{
 		frame.add(pnllbl,BorderLayout.CENTER);
 		frame.add(pnlbtn,BorderLayout.SOUTH);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		pnllbl.setLayout(new GridLayout(10,2));	
+		pnllbl.setLayout(new GridLayout(9,2));	
 
 		
 	}
@@ -138,9 +130,10 @@ public class InfoFrame extends JFrame implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		if (e.getSource()==creer)
+		if (e.getSource()==suivant)
 		{
-			//new ExamEvent(new Date(dat.getText()),new Person(fonction.getText(),nom.getText(),prenom.getText(),mail.getText(),tel.getText()), jury,salle.getText(), document)
+			//new ExamEvent(new Date(dat.getText()),new Person(fonction.getText(),nom.getText(),prenom.getText(),mail.getText(),tel.getText()),salle.getText(), document)
+			new FrameJury(this.exam);
 		}
 	}
 

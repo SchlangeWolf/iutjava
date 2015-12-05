@@ -16,6 +16,14 @@ public class ExamEvent {
 		this.documents=document;
 	}
 	
+	public ExamEvent(Date date, Person person,
+			Classroom classRoom, ArrayList<Document> document) {
+		this.examDate = date;
+		this.student=person;
+		this.classroom=classRoom;
+		this.documents=document;
+}
+	
 	/** EX2: FAITE LES ACCESSEURS DES ATTRIBUTS, AJOUTER DES ATTRIBUT ? **/
 	protected Date examDate;
 	protected Person student;

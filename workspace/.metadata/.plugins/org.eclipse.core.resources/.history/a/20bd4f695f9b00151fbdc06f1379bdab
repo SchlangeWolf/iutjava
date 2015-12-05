@@ -1,0 +1,44 @@
+package edu.iut.gui.frames;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+import edu.iut.app.ExamEvent;
+
+public class FrameJury extends JFrame {
+	
+	private JFrame fenetre;
+	
+	private JLabel jury;
+	
+	private JTextField jr;
+	
+	private JButton Ajoutjr;
+	
+	private JPanel pnllbl;
+	private JPanel pnlbtn;
+	
+	private ExamEvent exam;
+	
+	
+	
+	
+	public FrameJury(ExamEvent exam)
+	{
+		this.exam=exam;
+		fenetre=new JFrame("Information Jury");
+		
+		
+		pnllbl=new JPanel();
+		pnlbtn=new JPanel();
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
