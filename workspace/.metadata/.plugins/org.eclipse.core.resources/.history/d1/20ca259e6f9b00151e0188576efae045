@@ -119,15 +119,14 @@ public class InfoFrame extends JFrame implements ActionListener{
 		frame.setVisible(true);
 		
 		frame.pack();
-	
+		frame.setSize(500, 300);
 		frame.setLocationRelativeTo(null);
 		frame.setLayout(new BorderLayout());
 		frame.add(pnllbl,BorderLayout.WEST);
 		frame.add(pnltxt,BorderLayout.EAST);
 		frame.add(pnlbtn,BorderLayout.SOUTH);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		pnllbl.setLayout(new GridLayout(9,1));	
-		pnltxt.setLayout(new GridLayout(9,1));
+		pnllbl.setLayout(new GridLayout(9,2));	
 
 		
 	}

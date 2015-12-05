@@ -44,7 +44,6 @@ public class InfoFrame extends JFrame implements ActionListener{
 	private JTextField doc;
 	
 	private JPanel pnllbl;
-	private JPanel pnltxt;
 	private JPanel pnlbtn;
 	
 	private Agenda agenda;
@@ -58,7 +57,6 @@ public class InfoFrame extends JFrame implements ActionListener{
 		frame=new JFrame("Information examen");
 		
 		pnllbl=new JPanel();
-		pnltxt=new JPanel();
 		pnlbtn=new JPanel();
 		
 		function=new JLabel("Function :");
@@ -90,44 +88,42 @@ public class InfoFrame extends JFrame implements ActionListener{
 		suivant.addActionListener(this);
 		
 		pnllbl.add(function);
-		pnltxt.add(fonction);
+		pnllbl.add(fonction);
 		
 		pnllbl.add(firstname);
-		pnltxt.add(nom);
+		pnllbl.add(nom);
 		
 		pnllbl.add(lastname);
-		pnltxt.add(prenom);
+		pnllbl.add(prenom);
 		
 		pnllbl.add(email);
-		pnltxt.add(mail);
+		pnllbl.add(mail);
 		
 		pnllbl.add(phone);
-		pnltxt.add(tel);
+		pnllbl.add(tel);
 		
 		pnllbl.add(date);
-		pnltxt.add(dat);
+		pnllbl.add(dat);
 		
 		pnllbl.add(classroom);
-		pnltxt.add(salle);
+		pnllbl.add(salle);
 		
 		pnllbl.add(document);
-		pnltxt.add(doc);
-		pnltxt.add(Ajoutdoc);
+		pnllbl.add(doc);
+		pnllbl.add(Ajoutdoc);
 		pnlbtn.add(suivant);
 
 		
 		frame.setVisible(true);
 		
 		frame.pack();
-	
+		frame.setSize(500, 300);
 		frame.setLocationRelativeTo(null);
 		frame.setLayout(new BorderLayout());
-		frame.add(pnllbl,BorderLayout.WEST);
-		frame.add(pnltxt,BorderLayout.EAST);
+		frame.add(pnllbl,BorderLayout.CENTER);
 		frame.add(pnlbtn,BorderLayout.SOUTH);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		pnllbl.setLayout(new GridLayout(9,1));	
-		pnltxt.setLayout(new GridLayout(9,1));
+		pnllbl.setLayout(new GridLayout(9,2));	
 
 		
 	}
