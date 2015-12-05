@@ -3,7 +3,7 @@ package edu.iut.app;
 import java.util.ArrayList;
 import java.util.List;
 /**
-* <b>ClassCritereNum permet de trier une list de Classroom en fonction de leur numéro
+* <b>ClassCritereNum permet de trier une list de Classroom en fonction de leur numéro</b>
 * @see ClassRoom
 * @see List
 * @author Schlange

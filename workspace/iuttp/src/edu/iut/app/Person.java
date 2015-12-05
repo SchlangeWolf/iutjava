@@ -1,5 +1,9 @@
 package edu.iut.app;
-
+/**
+ * <b>Person est la classe représentant les personnes concernées par les stages</b>
+ * @author Wilhelm
+ *
+ */
 public class Person {
 	
 	protected PersonFunction personFunction;

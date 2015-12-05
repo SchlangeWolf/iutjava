@@ -2,24 +2,35 @@ package edu.iut.app;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+* <b>DocCritereUrl permet de trier une list de Document en fonction de leur url</b>
+* @see Document
+* @see List
+* @author Schlange
+*
+*/
 public class DocCritereUrl implements DocCritere{
 
 	
 	private Document doc;
-	
-	public List<Document> comparer(Document docPrincp, List<Document> docs){
+	/**
+	 * Création d'un filtre à partir d'un document existant
+	 * @param docPrincp
+	 */
+	public DocCritereUrl (Document docPrincp){
 		this.doc=docPrincp;
-		
-		return meetCriteria(docs);
 	}
-	
-	public List<Document> comparer(String docPrincp, List<Document> docs){
+	/**
+	 * Création d'un filtre à partir d'un nouveau document
+	 * @param docPrincp
+	 */
+	public DocCritereUrl (String docPrincp){
 		this.doc= new Document(docPrincp);
-		
-		return meetCriteria(docs);
 	}
-	
+	/**
+	 * Effectue le filtre
+	 * @return La liste de Document filtré par rapport à l'url du Document principal
+	 */
 	public List<Document> meetCriteria(List<Document> docs) {
 		// TODO Auto-generated method stub
 		List<Document> ret = new ArrayList<Document>();

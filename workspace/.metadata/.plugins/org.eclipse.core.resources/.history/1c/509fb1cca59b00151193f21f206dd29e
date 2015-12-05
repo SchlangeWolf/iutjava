@@ -1,0 +1,52 @@
+package edu.iut.app;
+
+import java.util.ArrayList;
+import java.util.List;
+/**
+ * <b>ExamEventDate est la classe filtrant les ExamEvent partageant le même jury que l'ExamEvent référent</b>
+ * @see ExamEvent
+ * @see Person
+ * @author Schlange
+ *
+ */
+public class ExamEventJury implements CritereExamEvent {
+	/**
+	 * LExamEvent de référence
+	 */
+	private ExamEvent exa;
+	/**
+	 * Création du filtre à partir d'un ExamEvent existant
+	 * @param exam
+	 */
+	public ExamEventJury(ExamEvent exam) {
+		// TODO Auto-generated constructor stub
+		this.exa=exam;
+	}
+	/**
+	 * Création du filtre à partir d'un nouveau jury
+	 * @param jury
+	 */
+	public ExamEventJury(ArrayList<Person> jury) {
+		// TODO Auto-generated constructor stub
+		this.exa=new ExamEvent();
+		this.exa.setJury(jury);
+	}
+
+	/**
+	 * Filtrage de la list partageant le même jury que l'ExamEvent de référence
+	 */
+	public List<ExamEvent> meetCriteria(List<ExamEvent> examevent) {
+		
+		List<ExamEvent> JuryExamEvent = new ArrayList<ExamEvent>();
+		
+		for(ExamEvent exams : examevent){
+			if(exams.getJury().toString()==this.exa.getJury().toString()){
+				JuryExamEvent.add(exams);
+			}
+		}
+		
+		return JuryExamEvent;
+	}
+	}
+
+

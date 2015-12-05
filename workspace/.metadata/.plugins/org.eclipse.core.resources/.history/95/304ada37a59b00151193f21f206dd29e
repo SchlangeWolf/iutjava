@@ -1,0 +1,52 @@
+package edu.iut.app;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+/**
+ * <b>ExamEventDate est la classe filtrant les ExamEvent partageant la même date de passage que l'ExamEvent référent</b>
+ * @see ExamEvent
+ * @see LinkedList
+ * @author Schlange
+ *
+ */
+public class ExamEventDate implements CritereExamEvent {
+	/**
+	 * L'ExamEvent de référence
+	 */
+	private ExamEvent exa;
+	/**
+	 * Création du filtre à partir d'un ExamEvent existant
+	 * @param exam
+	 */
+	public ExamEventDate(ExamEvent exam) {
+		this.exa=exam;
+	}
+	
+	/**
+	 * Création du filtre à partir d'une nouvelle date
+	 * @param dat
+	 */
+	public ExamEventDate(Date dat) {
+		this.exa=new ExamEvent();
+		this.exa.setExamDate(dat);
+	}
+	
+	/**
+	 * Filtrage de la list partageant la même date de passage que l'ExamEvent de référence
+	 */
+	public List<ExamEvent> meetCriteria(List<ExamEvent>examevent) {
+		// TODO Auto-generated method stub
+		List<ExamEvent> DateExamEvent = new ArrayList<ExamEvent>();
+		
+		for(ExamEvent exams : examevent){
+			if(exams.getExamDate().toString()==this.exa.getExamDate().toString()){
+				DateExamEvent.add(exams);
+			}
+		}
+		
+		return DateExamEvent;
+	}
+	}
+
+

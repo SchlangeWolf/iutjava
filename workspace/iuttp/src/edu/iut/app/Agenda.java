@@ -2,7 +2,7 @@ package edu.iut.app;
 
 import java.util.LinkedList;
 /**
- * <b>Agenda est la classe contenant tous les ExamEvents dans une list
+ * <b>Agenda est la classe contenant tous les ExamEvents dans une list</b>
  * @see ExamEvent
  * @see LinkedList
  * @author Schlange
