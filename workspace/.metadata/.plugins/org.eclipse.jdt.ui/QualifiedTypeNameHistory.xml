@@ -25,6 +25,7 @@
 <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
 <fullyQualifiedTypeName name="edu.iut.gui.frames.FrameJury"/>
 <fullyQualifiedTypeName name="edu.iut.app.Agenda"/>
-<fullyQualifiedTypeName name="edu.iut.app.ExamEvent"/>
 <fullyQualifiedTypeName name="edu.iut.app.Classroom"/>
+<fullyQualifiedTypeName name="edu.iut.gui.frames.FrameDoc"/>
+<fullyQualifiedTypeName name="edu.iut.app.ExamEvent"/>
 </qualifiedTypeNameHistroy>

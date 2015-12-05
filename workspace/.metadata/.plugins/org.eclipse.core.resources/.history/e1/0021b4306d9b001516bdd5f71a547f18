@@ -1,0 +1,10 @@
+package edu.iut.gui.frames;
+
+public class FrameDoc {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
