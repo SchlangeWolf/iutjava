@@ -33,15 +33,12 @@ public class ControlAgendaViewPanel extends JPanel implements ActionListener {
 	JComboBox<String>jour;
 	JButton creer;
 	JButton supprimer;
-	private Agenda agenda;
 	
 	
 	public ControlAgendaViewPanel(CardLayout layerLayout, final JPanel contentPane) {
 
 		this.agendaViewLayout = layerLayout;
 		this.contentPane = contentPane;
-		
-		new Agenda();
 		/** EX3: REMPLACEMENT DU BOUTON NEXT */
 		annee= new JSpinner(new SpinnerNumberModel(2015, 2010, 2020, 1));
 		add(annee);
@@ -72,7 +69,8 @@ public class ControlAgendaViewPanel extends JPanel implements ActionListener {
 		// TODO Auto-generated method stub
 		if(e.getSource()==creer)
 		{
-			new InfoFrame(new Agenda());
+			new InfoFrame(new ExamEvent());
+			new Agenda();
 		}
 		
 	}

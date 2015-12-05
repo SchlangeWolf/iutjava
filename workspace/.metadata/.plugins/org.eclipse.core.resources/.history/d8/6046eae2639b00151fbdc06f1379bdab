@@ -24,7 +24,7 @@ public class FrameJury extends JFrame implements ActionListener{
 	private JButton Ajoutjr;
 	
 	private JPanel pnllbl;
-	private JPanel pnlajoutjr;
+	private JPanel pnl;
 	private JPanel pnlbtn;
 	private JButton creerexam;
 	
@@ -45,13 +45,13 @@ public class FrameJury extends JFrame implements ActionListener{
 		creerexam=new JButton("Creer exam");
 		
 		pnllbl=new JPanel();
-		pnlajoutjr=new JPanel();
+		pnl=new JPanel();
 		
 		pnlbtn=new JPanel();
 		
 		pnllbl.add(jury);
-		pnlajoutjr.add(jr);
-		pnlajoutjr.add(Ajoutjr);
+		pnl.add(jr);
+		pnl.add(Ajoutjr);
 		pnlbtn.add(creerexam);
 		
 		
@@ -63,11 +63,11 @@ public class FrameJury extends JFrame implements ActionListener{
 		fenetre.setLocationRelativeTo(null);
 		fenetre.setLayout(new BorderLayout());
 		fenetre.add(pnllbl,BorderLayout.WEST);
-		fenetre.add(pnlajoutjr,BorderLayout.EAST);
+		fenetre.add(pnl,BorderLayout.EAST);
 		fenetre.add(pnlbtn,BorderLayout.SOUTH);
 		fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		pnllbl.setLayout(new GridLayout(1,1));
-		pnlajoutjr.setLayout(new GridLayout(2,1));
+		pnl.setLayout(new GridLayout(2,1));
 		
 		
 	}

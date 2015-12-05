@@ -7,11 +7,11 @@ public class ExamEvent {
 	public ExamEvent() {		
 	}
 	
-	public ExamEvent(Date date, Person person,
+	public ExamEvent(Date date, Person person, ArrayList<Person> jury,
 					Classroom classRoom) {
 		this.examDate = date;
 		this.student=person;
-		
+		this.jury=jury;
 		this.classroom=classRoom;
 		
 	}

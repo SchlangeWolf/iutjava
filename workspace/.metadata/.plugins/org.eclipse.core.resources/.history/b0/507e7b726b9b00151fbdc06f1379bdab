@@ -11,7 +11,7 @@ public class ExamEvent {
 					Classroom classRoom) {
 		this.examDate = date;
 		this.student=person;
-		
+		this.jury=jury;
 		this.classroom=classRoom;
 		
 	}

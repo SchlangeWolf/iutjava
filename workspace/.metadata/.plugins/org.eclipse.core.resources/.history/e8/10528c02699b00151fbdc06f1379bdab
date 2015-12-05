@@ -12,8 +12,6 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import edu.iut.app.Agenda;
-import edu.iut.app.Classroom;
 import edu.iut.app.ExamEvent;
 import edu.iut.app.Person;
 
@@ -29,7 +27,6 @@ public class InfoFrame extends JFrame implements ActionListener{
 	private JLabel date;
 	private JLabel classroom;
 	private JLabel document;
-	Classroom clas;
 	
 	private JButton suivant;
 	
@@ -45,14 +42,12 @@ public class InfoFrame extends JFrame implements ActionListener{
 	private JPanel pnllbl;
 	private JPanel pnlbtn;
 	
-	private Agenda agenda;
+	private ExamEvent agenda;
 
 	
 	public InfoFrame(Agenda ag)
-	{
-		
+	{	
 		this.agenda=ag;
-	
 		frame=new JFrame("Information examen");
 		
 		pnllbl=new JPanel();
@@ -127,7 +122,8 @@ public class InfoFrame extends JFrame implements ActionListener{
 	
 	public static void main(String args[])
 	{	
-		
+		ExamEvent exam=new ExamEvent();
+		new InfoFrame(exam);
 		
 	}
 
@@ -135,10 +131,9 @@ public class InfoFrame extends JFrame implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		if (e.getSource()==suivant)
-		{	
-			
-			this.agenda.add(new ExamEvent(new Date(dat.getText()),new Person(fonction.getText(),nom.getText(),prenom.getText(),mail.getText(),tel.getText()),this.clas.setsalle(getText()));
-			
+		{
+			//new ExamEvent(new Date(dat.getText()),new Person(fonction.getText(),nom.getText(),prenom.getText(),mail.getText(),tel.getText()),salle.getText(), document)
+			new FrameJury(this.exam);
 		}
 	}
 

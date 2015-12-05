@@ -72,7 +72,8 @@ public class ControlAgendaViewPanel extends JPanel implements ActionListener {
 		// TODO Auto-generated method stub
 		if(e.getSource()==creer)
 		{
-			new InfoFrame(new Agenda());
+			new InfoFrame(new ExamEvent());
+			new Agenda();
 		}
 		
 	}
