@@ -22,11 +22,7 @@ import edu.iut.gui.widget.agenda.AgendaPanelFactory;
 import edu.iut.gui.widget.agenda.ControlAgendaViewPanel;
 import edu.iut.gui.widget.agenda.AgendaPanelFactory.ActiveView;
 
-/**
- * <b>SchedulerFrame est l'interface graphique principale qui affiche l'agenda et permet d'interrargir avec les ExamEvent </b>
- * @author Wilhelm
- *
- */
+
 public class SchedulerFrame extends JFrame implements ActionListener{
 	JPanel contentPane;
 	CardLayout layerLayout;

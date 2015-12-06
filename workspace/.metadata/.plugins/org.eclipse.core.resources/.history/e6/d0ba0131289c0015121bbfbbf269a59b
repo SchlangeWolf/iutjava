@@ -17,14 +17,7 @@ import edu.iut.app.Agenda;
 import edu.iut.app.Classroom;
 import edu.iut.app.ExamEvent;
 import edu.iut.app.Person;
-/**
- * 
- * <b>InfoFrame permet de créer l'interface graphique pour ajouter un ExamEvent</b>
- * @see JFrame
- * @see ActionListener
- * @author Wilhelm
- *
- */
+
 public class InfoFrame extends JFrame implements ActionListener{ 
 	
 	private JFrame frame;
@@ -62,10 +55,7 @@ public class InfoFrame extends JFrame implements ActionListener{
 	
 	private Agenda agenda;
 
-	/**
-	 * Création d'une interface vide
-	 * @param ag
-	 */
+	
 	public InfoFrame(Agenda ag)
 	{
 		
