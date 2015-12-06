@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;juryPersons&apos; in &apos;edu.iut.app.PersonCritereNone.meetCriteria(...)&apos; to &apos;nonePersons&apos;&#x0D;&#x0A;- Original project: &apos;iuttp&apos;&#x0D;&#x0A;- Original element: &apos;edu.iut.app.PersonCritereNone.meetCriteria(List&lt;Person&gt;).juryPersons&apos;&#x0D;&#x0A;- Renamed element: &apos;juryPersons&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;juryPersons&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;edu.iut.app{PersonCritereNone.java[PersonCritereNone~meetCriteria~QList\&lt;QPerson;&gt;;@juryPersons!500!550!513!523!QList\&lt;QPerson;&gt;;!0!false" name="nonePersons" references="true" stamp="1449412895541" version="1.0"/>
+</session>

@@ -5,34 +5,77 @@ package edu.iut.app;
  *
  */
 public class Person {
-	
+	/**
+	 * la fonction de la personne (enumeration des valeurs possibles ci-dessous
+	 */
 	protected PersonFunction personFunction;
+	/**
+	 * le prenom de la personne
+	 */
 	protected String firstname;
+	/**
+	 * le nom de famille de la personne
+	 */
 	protected String lastname;
+	/**
+	 * l'email de la personne
+	 */
 	protected String email;
+	/**
+	 * le numéro de téléphone de la personne
+	 */
 	protected String phone;
-	
+	/**
+	 * Ceci est une énumération des valeurs possibles de la donftion d'une personne
+	 * @author Wilhelm
+	 *
+	 */
 	public enum PersonFunction{
 		/* EX2 : Internationalisation */
+		/**
+		 * si la personne n'a pas encore de fonction
+		 */
 		NONE("None"),
+		/**
+		 * si la personne fait partie d'un Jury
+		 */
 		JURY("Jury"),
+		/**
+		 * Si la personne est un étudiant
+		 */
 		STUDENT("Student");
-		
+		/**
+		 * la fonction de la personne
+		 */
 		private String personFunction;
-		
+		/**
+		 * affectation de la fonction de la personne
+		 * @param personFunction
+		 */
 		PersonFunction(String personFunction) {
 			this.personFunction = personFunction;
 		}
-		
+		/**
+		 * renvoi la fonction de la personne
+		 */
 		public String toString() {
 			return personFunction;
 		}		
 	}
-	
+	/**
+	 * Création d'une personne vide
+	 */
 	public Person() {
 		personFunction = PersonFunction.NONE;
 	}
-	
+	/**
+	 * Création d'une personne complète
+	 * @param personFunction
+	 * @param firstname
+	 * @param lastname
+	 * @param email
+	 * @param phone
+	 */
 	public Person(PersonFunction personFunction,
 				  String firstname,
 				  String lastname,
@@ -77,9 +120,5 @@ public class Person {
 	public String getPhone() {
 		return phone;
 	}
-
-	
-	
-	
 
 }
