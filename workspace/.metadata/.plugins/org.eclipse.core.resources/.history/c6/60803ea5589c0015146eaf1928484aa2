@@ -1,11 +1,19 @@
 package edu.iut.gui.widget.agenda;
 
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.util.LinkedList;
 
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import edu.iut.app.ExamEvent;
 import edu.iut.gui.widget.agenda.WeekPanel.WeekDayNames;
 /**
- * <b>AgendaPanelFactory est la classe qui gère l'interface graphique</b>
+ * <b>AgendaPanelFactory est la classe qui gère l'interface graphique de l'agenda</b>
+ * @see ExamEvent
+ * @see LinkedList
  * @author Schlange
  *
  */

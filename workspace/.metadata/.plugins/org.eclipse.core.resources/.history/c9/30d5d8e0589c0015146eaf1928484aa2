@@ -21,11 +21,7 @@ import edu.iut.app.Agenda;
 import edu.iut.app.ApplicationSession;
 import edu.iut.app.ExamEvent;
 import edu.iut.gui.frames.InfoFrame;
-/**
- * <b>ControlAgendaViewPanel est la classe qui controle l'interface graphique</b>
- * @author Schlange
- *
- */
+
 public class ControlAgendaViewPanel extends JPanel implements ActionListener {
 
 	CardLayout agendaViewLayout;

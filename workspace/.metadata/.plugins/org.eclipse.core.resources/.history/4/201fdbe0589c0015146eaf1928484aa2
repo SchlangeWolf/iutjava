@@ -6,6 +6,7 @@ import javax.swing.JPanel;
 import edu.iut.gui.widget.agenda.WeekPanel.WeekDayNames;
 /**
  * <b>AgendaPanelFactory est la classe qui gère l'interface graphique</b>
+
  * @author Schlange
  *
  */

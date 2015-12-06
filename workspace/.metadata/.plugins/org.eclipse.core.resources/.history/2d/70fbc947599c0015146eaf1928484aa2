@@ -8,11 +8,7 @@ import javax.swing.JPanel;
 
 import edu.iut.gui.widget.agenda.AgendaPanelFactory.ActiveView;
 import edu.iut.gui.widget.agenda.WeekPanel.WeekDayNames;
-/**
- * <b>DayPanel est la classe qui controle l'interface graphique</b>
- * @author Schlange
- *
- */
+
 public class DayPanel extends EventPanel {
 
 	public DayPanel(ActiveView activeView,WeekDayNames weekDayNames) {
