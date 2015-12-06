@@ -4,6 +4,7 @@ import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.Date;
 
 import javax.swing.JButton;
@@ -28,11 +29,15 @@ public class InfoFrame extends JFrame implements ActionListener{
 	private JLabel phone;
 	private JLabel date;
 	private JLabel classroom;
+	private JLabel jury;
 	private JLabel document;
+	private JLabel vide1;
+	private JLabel vide2;
 	Classroom clas;
 	
-	private JButton suivant;
+	private JButton creer;
 	private JButton Ajoutdoc;
+	private JButton Ajoutjr;
 	
 	private JTextField fonction;
 	private JTextField nom;
@@ -41,6 +46,7 @@ public class InfoFrame extends JFrame implements ActionListener{
 	private JTextField tel;
 	private JTextField dat;
 	private JTextField salle;
+	private JTextField jr;
 	private JTextField doc;
 	
 	private JPanel pnllbl;
@@ -60,6 +66,9 @@ public class InfoFrame extends JFrame implements ActionListener{
 		pnllbl=new JPanel();
 		pnltxt=new JPanel();
 		pnlbtn=new JPanel();
+		
+		vide1=new JLabel("");
+		vide2=new JLabel("");
 		
 		function=new JLabel("Function :");
 		fonction=new JTextField(20);
@@ -82,52 +91,69 @@ public class InfoFrame extends JFrame implements ActionListener{
 		classroom=new JLabel("Classroom number :");
 		salle=new JTextField(3);
 		
+		jury=new JLabel("Jury number :");
+		jr=new JTextField(3);
+		
 		document=new JLabel("Nom document:");
 		doc=new JTextField(10);
 		
-		suivant=new JButton("Suivant");
+		creer=new JButton("Créer examen");
+		creer.addActionListener(this);
+		
 		Ajoutdoc=new JButton("Ajout doc");
-		suivant.addActionListener(this);
+		Ajoutdoc.addActionListener(this);
+		
+		Ajoutjr=new JButton("Ajout jury");
+		Ajoutjr.addActionListener(this);
+		
 		
 		pnllbl.add(function);
-		pnltxt.add(fonction);
+		pnllbl.add(fonction);
 		
 		pnllbl.add(firstname);
-		pnltxt.add(nom);
+		pnllbl.add(nom);
 		
 		pnllbl.add(lastname);
-		pnltxt.add(prenom);
+		pnllbl.add(prenom);
 		
 		pnllbl.add(email);
-		pnltxt.add(mail);
+		pnllbl.add(mail);
 		
 		pnllbl.add(phone);
-		pnltxt.add(tel);
+		pnllbl.add(tel);
 		
 		pnllbl.add(date);
-		pnltxt.add(dat);
+		pnllbl.add(dat);
 		
 		pnllbl.add(classroom);
-		pnltxt.add(salle);
+		pnllbl.add(salle);
+		
+		pnllbl.add(jury);
+		pnllbl.add(jr);
+		pnllbl.add(vide1);
+		pnllbl.add(Ajoutjr);
 		
 		pnllbl.add(document);
-		pnltxt.add(doc);
-		pnltxt.add(Ajoutdoc);
-		pnlbtn.add(suivant);
+		pnllbl.add(doc);
+		pnllbl.add(vide2);
+		pnllbl.add(Ajoutdoc);
+		pnlbtn.add(creer);
 
 		
 		frame.setVisible(true);
 		
 		frame.pack();
-	
+		
+		frame.setSize(460,400);
+		frame.setResizable(false);
 		frame.setLocationRelativeTo(null);
 		frame.setLayout(new BorderLayout());
 		frame.add(pnllbl,BorderLayout.WEST);
 		frame.add(pnltxt,BorderLayout.EAST);
 		frame.add(pnlbtn,BorderLayout.SOUTH);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		pnllbl.setLayout(new GridLayout(9,1));	
-		pnltxt.setLayout(new GridLayout(9,1));
+		pnllbl.setLayout(new GridLayout(11,2));	
+		//pnltxt.setLayout(new GridLayout(14,1));
 
 		
 	}
@@ -136,11 +162,16 @@ public class InfoFrame extends JFrame implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		if (e.getSource()==suivant)
+		if (e.getSource()==creer)
 		{	
+		/*	ExamEvent exam=new ExamEvent();
+			clas=new Classroom();
+			clas.setClassroomNumber(salle.getText());
+		     this.agenda.addCheckedEvent((new ExamEvent(new Date(dat.getText()),new Person(fonction.getText(),nom.getText(),prenom.getText(),mail.getText(),tel.getText()),exam.getJury(),clas.getClassRoomNumber(),exam.getDocuments()));
 			
-			//this.agenda.add(new ExamEvent(new Date(dat.getText()),new Person(fonction.getText(),nom.getText(),prenom.getText(),mail.getText(),tel.getText()),this.clas.setsalle(getText())));
-			
+		   */
+		
+		
 		}
 	}
 

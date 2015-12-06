@@ -63,14 +63,14 @@ public class ExamEvent {
 	 * @param classRoom
 	 * @param document
 	 */
-	public ExamEvent(Date date, Person person,
+	/*public ExamEvent(Date date, Person person,
 			Classroom classRoom, ArrayList<Document> document) {
 		this.examDate = date;
 		this.student=person;
 		this.classroom=classRoom;
 		this.documents=document;
 }
-	
+	*/
 	public Date getExamDate() {
 		return examDate;
 	}

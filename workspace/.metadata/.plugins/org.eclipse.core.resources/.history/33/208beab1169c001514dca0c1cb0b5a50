@@ -1,0 +1,174 @@
+package edu.iut.gui.frames;
+
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Date;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+import edu.iut.app.Agenda;
+import edu.iut.app.Classroom;
+import edu.iut.app.ExamEvent;
+import edu.iut.app.Person;
+
+public class InfoFrame extends JFrame implements ActionListener{ 
+	
+	private JFrame frame;
+	
+	private JLabel function;
+	private JLabel firstname;
+	private JLabel lastname;
+	private JLabel email;
+	private JLabel phone;
+	private JLabel date;
+	private JLabel classroom;
+	private JLabel jury;
+	private JLabel document;
+	private JLabel vide1;
+	private JLabel vide2;
+	Classroom clas;
+	
+	private JButton suivant;
+	private JButton Ajoutdoc;
+	private JButton Ajoutjr;
+	
+	private JTextField fonction;
+	private JTextField nom;
+	private JTextField prenom;
+	private JTextField mail;
+	private JTextField tel;
+	private JTextField dat;
+	private JTextField salle;
+	private JTextField jr;
+	private JTextField doc;
+	
+	private JPanel pnllbl;
+	private JPanel pnltxt;
+	private JPanel pnlbtn;
+	
+	private Agenda agenda;
+
+	
+	public InfoFrame(Agenda ag)
+	{
+		
+		this.agenda=ag;
+	
+		frame=new JFrame("Information examen");
+		
+		pnllbl=new JPanel();
+		pnltxt=new JPanel();
+		pnlbtn=new JPanel();
+		
+		vide1=new JLabel("");
+		vide2=new JLabel("")
+		
+		function=new JLabel("Function :");
+		fonction=new JTextField(20);
+		
+		firstname=new JLabel("First name :");
+		nom=new JTextField(20);
+		
+		lastname=new JLabel("Last name :");
+		prenom=new JTextField(20);
+		
+		email=new JLabel("email :");
+		mail=new JTextField(10);
+		
+		phone=new JLabel("Phone number :");
+		tel=new JTextField(10);
+		
+		date=new JLabel("Date :");
+		dat=new JTextField(10);
+		
+		classroom=new JLabel("Classroom number :");
+		salle=new JTextField(3);
+		
+		jury=new JLabel("Jury number :");
+		jr=new JTextField(3);
+		
+		document=new JLabel("Nom document:");
+		doc=new JTextField(10);
+		
+		suivant=new JButton("Suivant");
+		suivant.addActionListener(this);
+		
+		Ajoutdoc=new JButton("Ajout doc");
+		Ajoutdoc.addActionListener(this);
+		
+		Ajoutjr=new JButton("Ajout jury");
+		Ajoutjr.addActionListener(this);
+		
+		suivant.addActionListener(this);
+		
+		pnllbl.add(function);
+		pnllbl.add(fonction);
+		
+		pnllbl.add(firstname);
+		pnllbl.add(nom);
+		
+		pnllbl.add(lastname);
+		pnllbl.add(prenom);
+		
+		pnllbl.add(email);
+		pnllbl.add(mail);
+		
+		pnllbl.add(phone);
+		pnllbl.add(tel);
+		
+		pnllbl.add(date);
+		pnllbl.add(dat);
+		
+		pnllbl.add(classroom);
+		pnllbl.add(salle);
+		
+		pnllbl.add(jury);
+		pnllbl.add(jr);
+		pnllbl.add(vide);
+		pnllbl.add(Ajoutjr);
+		
+		pnllbl.add(document);
+		pnllbl.add(doc);
+		pnllbl.add(Ajoutdoc);
+		pnlbtn.add(suivant);
+
+		
+		frame.setVisible(true);
+		
+		frame.pack();
+		
+		frame.setSize(350,400);
+		frame.setLocationRelativeTo(null);
+		frame.setLayout(new BorderLayout());
+		frame.add(pnllbl,BorderLayout.WEST);
+		frame.add(pnltxt,BorderLayout.EAST);
+		frame.add(pnlbtn,BorderLayout.SOUTH);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		pnllbl.setLayout(new GridLayout(11,2));	
+		//pnltxt.setLayout(new GridLayout(14,1));
+
+		
+	}
+	
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		if (e.getSource()==suivant)
+		{	
+			
+			//this.agenda.add(new ExamEvent(new Date(dat.getText()),new Person(fonction.getText(),nom.getText(),prenom.getText(),mail.getText(),tel.getText()),this.clas.setsalle(getText())));
+			new FrameJury(this.agenda);
+		}
+	}
+
+
+
+
+}

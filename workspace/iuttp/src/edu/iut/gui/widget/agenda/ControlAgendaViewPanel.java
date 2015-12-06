@@ -2,6 +2,7 @@ package edu.iut.gui.widget.agenda;
 
 import java.awt.BorderLayout;
 import java.awt.CardLayout;
+import java.awt.Label;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Calendar;
@@ -10,6 +11,7 @@ import java.util.Date;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
+import javax.swing.JLabel;
 import javax.swing.JSpinner;
 import javax.swing.JPanel;
 import javax.swing.SpinnerNumberModel;
@@ -34,12 +36,15 @@ public class ControlAgendaViewPanel extends JPanel implements ActionListener {
 	JButton creer;
 	JButton supprimer;
 	private Agenda agenda;
+	private JLabel ex;
 	
 	
 	public ControlAgendaViewPanel(CardLayout layerLayout, final JPanel contentPane) {
 
 		this.agendaViewLayout = layerLayout;
 		this.contentPane = contentPane;
+		
+		ex=new JLabel("exemple");
 		
 		new Agenda();
 		/** EX3: REMPLACEMENT DU BOUTON NEXT */
@@ -54,6 +59,7 @@ public class ControlAgendaViewPanel extends JPanel implements ActionListener {
 		supprimer=new JButton("Delete an exam");
 		add(creer);
 		add(supprimer);
+		add(ex);
 		
 	}
 	
